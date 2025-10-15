@@ -65,4 +65,8 @@ d)  Create views for the routes. Copy and paste the contents of pages/urls.py
 
 
 e)  Testing the Pages App:
-	i) Testing the Home route with the home page  Hard coded Hello World
+	i)  Testing the Home page with Hard coded values
+        ii) Testing the About page with Hard coded values
+        iii) Testing home1.html , about1.html using simple html pages
+        iv) Modify about page view to use about2.html passing context to the template engine
+        v) Modify about home page view to use home2.html passing context to the template engine
