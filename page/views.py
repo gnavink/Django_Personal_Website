@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
 # Default home page view with hardcoded response
 def home_page_view(request):
@@ -19,8 +20,8 @@ def home_page_view(request):
     
 
 # about page view with  hardcoded response
-def about_page_view(request):
-    return HttpResponse('About Page')
+# def about_page_view(request):
+#     return HttpResponse('About Page')
 
 # about page view using about.html
 # def about_page_view(request):
@@ -33,3 +34,7 @@ def about_page_view(request):
 #         'age': 50
 #     }
 #     return render(request, 'about2.html', context)
+
+# Class Based views
+class about_page_view(TemplateView):
+    template_name = "about1.html"
