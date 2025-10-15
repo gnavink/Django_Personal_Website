@@ -75,4 +75,8 @@ e)  Testing the Pages App:
                - Edit pages/urls.py to make about page view function as class based view
         vii) Passing context to template engine in about view as class based views:
                 Edit views.py : Modify about page view function to use class based view. Use about3.html
+        viii) Inheritance:
+                 Add base.html to templates folder
+                 Modify home page view to use inheritance from base.html . Use home3.html
+                 Modify about page view to use inheritance from base.html 
                                 
