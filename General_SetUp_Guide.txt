@@ -1,0 +1,68 @@
+Dj_Personal_Website Github Link:    https://github.com/gnavink/Django_Personal_Website
+
+1) SETTING UP THE CODEBASE
+   =======================
+
+a) Create & Activate Virtual Environment:
+      
+    i)  Create a folder Dj_Personal_Website
+        Open Up PowerShell
+	cd <path of Dj_Personal_Website folder>
+        # This folder is called the root project folder
+
+    ii)  python -m venv  .venv
+	 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+	.\.venv\Scripts\activate.ps1
+
+b) Install Django & Upgrade pip:
+	python -m pip  install django~=5.0.0
+	python -m pip install --upgrade pip
+
+c) Create Django Project:
+	# There is a single dot after django_project
+	django-admin  startproject django_project . 
+	python  manage.py  runserver    
+		
+
+2) CREATING APP & INFORMING DJANGO ABOUT THE APP:
+   =============================================
+
+a)  # Pages is the name of the app
+	python  manage.py  startapp pages	
+
+b)  # Inform Django about the pages app  
+	Modify django_project/settings.py as below:
+	  INSTALLED_APPS = [
+	    'django.contrib.admin',
+	     ...
+	     ...
+	    'pages',
+	  ]
+
+c)  # Inform Django where to look for routes in the pages app:
+	Copy and paste the contents in django_project/urls.py 
+
+
+3)  BUILDING PAGES WEB APPLICATION:
+    ===============================
+a)  Create a folder templates inside root project folder using File Explorer
+    Inside the templates folder create files home1.html, home2.html, about1.html, about2.html 
+    Copy their contents from templates folder in the github link
+
+b)  # Inform Django where to find the html files
+	Modify django_project/settings.py as below:
+	  TEMPLATES = [
+    {
+         ...
+        'DIRS': [BASE_DIR / 'templates'],
+    },
+  ]
+
+c)  # Configure Rule database inside pages app:
+	Create a new urls.py file inside pages directory. Copy and paste the contents of pages/urls.py from github
+
+d)  Create views for the routes. Copy and paste the contents of pages/urls.py
+
+
+e)  Testing the Pages App:
+	i) Testing the Home route with the home page  Hard coded Hello World
