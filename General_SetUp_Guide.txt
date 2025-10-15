@@ -70,6 +70,9 @@ e)  Testing the Pages App:
         iii) Testing home1.html , about1.html using simple html pages
         iv) Modify about page view to use about2.html passing context to the template engine
         v) Modify home page view to use home2.html passing context to the template engine
-        vi) Use Class based About Page View 
-               - Edit views.py : Modify about page view function to use class based view
+        vi) Use Class based Simple About Page View 
+               - Edit views.py : Modify about page view function to use class based view. Use about1.html
                - Edit pages/urls.py to make about page view function as class based view
+        vii) Passing context to template engine in about view as class based views:
+                Edit views.py : Modify about page view function to use class based view. Use about3.html
+                                
